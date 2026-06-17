@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="S.D. TermoIdraulica di D. Sapone – Idraulico a Torino dal 1989. Ricerca perdite acqua/gas/calore senza demolizione, termografie, video ispezioni canne fumarie. Chiama il 339 498 4500." />
+  <meta name="keywords" content="idraulico Torino, ricerca perdite, termografia, riscaldamento senza demolizione, video ispezione canna fumaria, S.D. TermoIdraulica, Sapone" />
+  <meta name="robots" content="index, follow" />
+  <title>S.D. TermoIdraulica – Idraulico a Torino | Ricerca Perdite, Riscaldamento senza demolizione</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── DESIGN TOKENS ─────────────────────────────────────────── */
+    :root {
+      --navy:    #1b3a6b;
+      --navy2:   #254e96;
+      --gold:    #d4820a;
+      --gold2:   #f0a030;
+      --red:     #c0392b;
+      --white:   #ffffff;
+      --light:   #f4f6f9;
+      --light2:  #eaecf0;
+      --text:    #1a1f2e;
+      --muted:   #5a6478;
+      --border:  #dde1ea;
+      --radius:  8px;
+      --shadow:  0 2px 16px rgba(27,58,107,.10);
+      --shadow2: 0 8px 32px rgba(27,58,107,.15);
+      --focus:   0 0 0 3px rgba(27,58,107,.45);
+    }
+
+    /* ─── BASE / MOBILE-FIRST ───────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-text-size-adjust: 100%;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── ACCESSIBILITY: SKIP LINK ──────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      font-weight: 700;
+      font-size: .9rem;
+      z-index: 9999;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 0; outline: 3px solid var(--gold2); outline-offset: 2px; }
+
+    /* ─── FOCUS VISIBLE (WCAG 2.4.7) ───────────────────────────── */
+    :focus-visible {
+      outline: 3px solid var(--navy);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    :focus:not(:focus-visible) { outline: none; }
+
+    /* ─── UTILITY ────────────────────────────────────────────────── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+    .section    { padding: 56px 0; }
+    .section--alt { background: var(--light); }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(27,58,107,.08);
+      color: var(--navy);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(27,58,107,.15);
+    }
+    h2.section-title {
+      font-size: clamp(1.4rem, 5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+    }
+    h2.section-title span { color: var(--gold); }
+    .section-sub { color: var(--muted); font-size: .95rem; max-width: 580px; line-height: 1.7; }
+    .section-header { margin-bottom: 40px; }
+
+    /* Buttons — min 44×44px touch target (WCAG 2.5.5) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform .18s, box-shadow .18s, background .18s, color .18s;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-navy  { background: var(--navy);  color: var(--white); border-color: var(--navy);  box-shadow: 0 4px 14px rgba(27,58,107,.3); }
+    .btn-navy:hover  { background: var(--navy2); border-color: var(--navy2); box-shadow: 0 8px 22px rgba(27,58,107,.35); }
+    .btn-gold  { background: var(--gold);  color: var(--white); border-color: var(--gold);  box-shadow: 0 4px 14px rgba(212,130,10,.3); }
+    .btn-gold:hover  { filter: brightness(1.08); box-shadow: 0 8px 22px rgba(212,130,10,.35); }
+    .btn-outline-navy { background: transparent; color: var(--navy); border-color: var(--navy); }
+    .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--navy); border-color: var(--white); font-weight: 800; box-shadow: 0 4px 18px rgba(0,0,0,.2); }
+    .btn-white:hover { background: #f0f4ff; box-shadow: 0 8px 28px rgba(0,0,0,.25); }
+    .btn-ghost { background: rgba(255,255,255,.12); color: var(--white); border-color: rgba(255,255,255,.35); }
+    .btn-ghost:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.6); }
+    .btn-big { min-height: 52px; padding: 14px 28px; font-size: 1rem; border-radius: 10px; }
+    .link-btn {
+      background: none; border: none; padding: 0;
+      color: var(--navy); font-family: inherit; font-size: inherit;
+      font-weight: 700; text-decoration: underline; cursor: pointer;
+    }
+    .link-btn:hover { color: var(--gold); }
+
+    /* ─── TOP BAR ────────────────────────────────────────────────── */
+    .top-bar {
+      background: var(--navy);
+      color: rgba(255,255,255,.85);
+      font-size: .82rem;
+      padding: 8px 0;
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .top-bar a { color: rgba(255,255,255,.9); transition: color .2s; }
+    .top-bar a:hover { color: var(--white); }
+    .top-bar .tel { font-weight: 700; color: var(--white); font-size: .9rem; }
+    .top-bar-sep { opacity: .4; }
+
+    /* ─── NAVBAR ─────────────────────────────────────────────────── */
+    #navbar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 16px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      flex-shrink: 0;
+    }
+    .nav-logo .logo-icon {
+      width: 38px; height: 38px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .nav-logo .sub { font-size: .65rem; font-weight: 500; color: var(--muted); display: block; margin-top: 1px; letter-spacing: .04em; text-transform: uppercase; }
+    .nav-links { display: none; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: .88rem; font-weight: 600; transition: color .2s; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--navy); border-bottom-color: var(--gold); outline: none; }
+    .hamburger {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 8px; background: none; border: none;
+      min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
+    }
+    .hamburger span { width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: .3s; display: block; }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    #mobile-menu { display: none; flex-direction: column; background: var(--white); border-bottom: 1px solid var(--border); }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { padding: 14px 16px; color: var(--muted); font-weight: 600; font-size: .92rem; border-bottom: 1px solid var(--light2); transition: color .2s, background .2s; min-height: 48px; display: flex; align-items: center; }
+    #mobile-menu a:hover,
+    #mobile-menu a:focus-visible { color: var(--navy); background: var(--light); }
+    .mobile-cta { padding: 14px 16px; }
+
+    /* ─── URGENCY BAR ────────────────────────────────────────────── */
+    .urgency-bar {
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .88rem;
+      font-weight: 600;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .urgency-bar a {
+      background: var(--white);
+      color: var(--red);
+      font-weight: 800;
+      padding: 6px 18px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .urgency-bar a:hover { filter: brightness(.95); }
+
+    /* ─── HERO ───────────────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #254e96 55%, #1a3a6b 100%);
+      color: var(--white);
+      padding: 56px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(212,130,10,.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; max-width: 620px; }
+    .hero-title {
+      font-size: clamp(1.9rem, 7vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -.03em;
+    }
+    .hero-title .accent { color: var(--gold2); }
+    .hero-subtitle { color: rgba(255,255,255,.82); font-size: .98rem; margin-bottom: 28px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .h-stat {
+      padding: 14px 10px;
+      border-right: 1px solid rgba(255,255,255,.15);
+      text-align: center;
+    }
+    .h-stat:last-child { border-right: none; }
+    .h-stat .n { font-size: 1.5rem; font-weight: 900; color: var(--gold2); line-height: 1; }
+    .h-stat .l { font-size: .68rem; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+    .hero-card { display: none; }
+
+    /* ─── SERVICES ───────────────────────────────────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 18px;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .service-card:hover { border-color: var(--navy2); box-shadow: var(--shadow2); transform: translateY(-2px); }
+    .service-card.urgent { border-color: rgba(192,57,43,.3); border-left: 4px solid var(--red); }
+    .service-card.urgent:hover { border-color: var(--red); }
+    .service-icon-wrap {
+      width: 48px; height: 48px;
+      background: var(--light);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 14px;
+    }
+    .service-card.urgent .service-icon-wrap { background: rgba(192,57,43,.08); }
+    .service-title { font-size: .97rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .service-desc  { color: var(--muted); font-size: .87rem; line-height: 1.6; }
+    .service-tag {
+      display: inline-block;
+      background: rgba(192,57,43,.1); color: var(--red);
+      font-size: .7rem; font-weight: 700;
+      padding: 3px 10px; border-radius: 99px;
+      margin-bottom: 8px; letter-spacing: .06em; text-transform: uppercase;
+    }
+
+    /* ─── STAT BAND ──────────────────────────────────────────────── */
+    .stat-band { background: var(--navy); color: var(--white); padding: 44px 0; }
+    .stat-band-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      text-align: center;
+    }
+    .stat-item {
+      padding: 18px 12px;
+      border-right: 1px solid rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .stat-item:nth-child(2n) { border-right: none; }
+    .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+    .stat-item .n { font-size: 2.2rem; font-weight: 900; color: var(--gold2); line-height: 1; }
+    .stat-item .l { font-size: .75rem; color: rgba(255,255,255,.7); margin-top: 6px; text-transform: uppercase; letter-spacing: .07em; }
+
+    /* ─── WHY US ─────────────────────────────────────────────────── */
+    .why-features { display: flex; flex-direction: column; gap: 14px; }
+    .why-feature {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px; background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; transition: border-color .2s, box-shadow .2s;
+    }
+    .why-feature:hover { border-color: var(--navy2); box-shadow: var(--shadow); }
+    .why-feature-icon {
+      flex-shrink: 0; width: 42px; height: 42px;
+      background: var(--navy); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .why-feature-body h3 { font-size: .93rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .why-feature-body p  { color: var(--muted); font-size: .85rem; }
+    .why-image-side {
+      background: var(--light); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px 24px; text-align: center; margin-top: 28px;
+    }
+    .big-rating { margin-bottom: 24px; }
+    .big-rating .stars { font-size: 1.8rem; color: #f0a030; letter-spacing: 3px; }
+    .big-rating .num   { font-size: 3.8rem; font-weight: 900; color: var(--navy); line-height: 1; margin-top: 6px; }
+    .big-rating .label { color: var(--muted); font-size: .82rem; margin-top: 4px; }
+    .mini-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px;
+    }
+    .mini-box {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 8px; text-align: center;
+    }
+    .mini-box .n { font-size: 1.3rem; font-weight: 900; color: var(--navy); }
+    .mini-box .l { font-size: .7rem; color: var(--muted); margin-top: 2px; }
+
+    /* ─── REVIEWS ────────────────────────────────────────────────── */
+    .highlights-row {
+      display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;
+    }
+    .hl-box {
+      background: rgba(27,58,107,.05); border: 1px solid rgba(27,58,107,.12);
+      border-radius: 10px; padding: 16px;
+    }
+    .hl-quote { font-style: italic; color: var(--text); font-size: .88rem; line-height: 1.6; }
+    .reviews-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .review-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 12px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .review-card:hover { box-shadow: var(--shadow2); transform: translateY(-2px); }
+    .review-header { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem; font-weight: 800; color: var(--white); flex-shrink: 0;
+    }
+    .review-meta .name { font-weight: 700; color: var(--text); font-size: .92rem; }
+    .review-meta .date { color: var(--muted); font-size: .77rem; margin-top: 1px; }
+    .review-stars { color: #f0a030; font-size: .88rem; letter-spacing: 2px; }
+    .review-text   { color: var(--muted); font-size: .87rem; line-height: 1.7; font-style: italic; }
+    .review-source { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: .74rem; margin-top: auto; }
+    .g-dot { width: 7px; height: 7px; border-radius: 50%; background: #4285f4; flex-shrink: 0; }
+
+    /* ─── CONTACT FORM ───────────────────────────────────────────── */
+    .form-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: .88rem; font-weight: 600; color: var(--text); }
+    .form-group label .req { color: var(--red); margin-left: 2px; }
+    .form-control {
+      width: 100%; min-height: 48px;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-family: inherit; font-size: .93rem; color: var(--text);
+      background: var(--white);
+      transition: border-color .2s, box-shadow .2s;
+      -webkit-appearance: none;
+    }
+    .form-control:focus { border-color: var(--navy); box-shadow: var(--focus); outline: none; }
+    .form-control.invalid { border-color: var(--red); }
+    textarea.form-control { min-height: 120px; resize: vertical; }
+    .field-error {
+      display: none; font-size: .8rem; color: var(--red);
+      font-weight: 600; margin-top: 2px;
+    }
+    .field-error.visible { display: block; }
+    .form-check {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px; background: var(--light); border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+    }
+    .form-check input[type="checkbox"] {
+      width: 20px; height: 20px; flex-shrink: 0;
+      margin-top: 2px; accent-color: var(--navy); cursor: pointer;
+    }
+    .form-check label { font-size: .88rem; color: var(--text); line-height: 1.5; cursor: pointer; }
+    #form-status {
+      padding: 14px 16px; border-radius: var(--radius);
+      font-weight: 600; font-size: .9rem; display: none;
+    }
+    #form-status.success { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+    #form-status.error   { background: #fdecea; color: #b71c1c; border: 1px solid #ef9a9a; }
+
+    /* ─── MAP / CONTACT ──────────────────────────────────────────── */
+    .area-map {
+      border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+      aspect-ratio: 4/3; box-shadow: var(--shadow); background: var(--light);
+      margin-bottom: 24px;
+    }
+    .area-map iframe { width: 100%; height: 100%; border: none; display: block; }
+    .map-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 12px;
+      padding: 24px; text-align: center; color: var(--muted);
+    }
+    .map-placeholder p { font-size: .88rem; line-height: 1.6; }
+    .contact-info { display: flex; flex-direction: column; gap: 14px; }
+    .c-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px; background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+    }
+    .c-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--navy); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    }
+    .c-body h3 { font-size: .75rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 3px; }
+    .c-body p   { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+    .c-body a   { color: var(--navy); font-weight: 800; font-size: 1.05rem; transition: color .2s; }
+    .c-body a:hover { color: var(--gold); }
+
+    /* ─── CTA SECTION ────────────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #254e96 100%);
+      padding: 64px 0; text-align: center; color: var(--white);
+    }
+    .cta-section h2 { font-size: clamp(1.5rem, 5vw, 2.4rem); font-weight: 900; margin-bottom: 10px; letter-spacing: -.02em; }
+    .cta-section h2 span { color: var(--gold2); }
+    .cta-section p   { color: rgba(255,255,255,.75); font-size: .97rem; margin-bottom: 28px; }
+    .cta-actions { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: #0e1e36;
+      color: rgba(255,255,255,.8);
+      padding: 48px 0 24px;
+    }
+    .footer-brand { margin-bottom: 32px; }
+    .footer-logo  { font-size: 1.15rem; font-weight: 800; color: var(--white); margin-bottom: 10px; }
+    .footer-logo span { color: var(--gold2); }
+    .footer-desc  { color: rgba(255,255,255,.6); font-size: .87rem; line-height: 1.7; max-width: 300px; }
+    .footer-cert  { display: inline-block; margin-top: 12px; border: 1px solid rgba(212,130,10,.4); color: var(--gold2); font-size: .73rem; font-weight: 700; padding: 4px 12px; border-radius: 6px; }
+    .footer-cols  { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+    .footer-col h4 { color: var(--white); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a { color: rgba(255,255,255,.55); font-size: .85rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--gold2); }
+    .footer-legal {
+      border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .footer-legal p   { color: rgba(255,255,255,.38); font-size: .78rem; }
+    .footer-legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-legal-links button {
+      background: none; border: none; padding: 0; color: rgba(255,255,255,.45);
+      font-family: inherit; font-size: .78rem; cursor: pointer; transition: color .2s;
+    }
+    .footer-legal-links button:hover { color: var(--gold2); }
+
+    /* ─── SCROLL TOP ─────────────────────────────────────────────── */
+    #scrollTop {
+      position: fixed; bottom: 80px; right: 16px;
+      width: 44px; height: 44px;
+      background: var(--navy); color: var(--white);
+      border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(27,58,107,.35);
+      opacity: 0; transform: translateY(10px);
+      transition: opacity .3s, transform .3s;
+      z-index: 100;
+    }
+    #scrollTop.show { opacity: 1; transform: translateY(0); }
+    #scrollTop:hover { background: var(--navy2); }
+
+    /* ─── COOKIE BANNER ──────────────────────────────────────────── */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 500;
+      background: #0e1e36;
+      color: var(--white);
+      padding: 16px;
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 -4px 24px rgba(0,0,0,.3);
+    }
+    #cookie-banner.hidden { display: none; }
+    .cookie-inner { max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .cookie-text { font-size: .85rem; line-height: 1.6; color: rgba(255,255,255,.85); }
+    .cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .cookie-btns .btn { min-height: 40px; padding: 8px 18px; font-size: .85rem; }
+    .btn-outline-white {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,.6);
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+    .cookie-personalizza {
+      background: none; border: none; padding: 2px 0;
+      color: rgba(255,255,255,.6); font-family: inherit; font-size: .8rem;
+      text-decoration: underline; cursor: pointer; align-self: center;
+    }
+    .cookie-personalizza:hover { color: var(--white); }
+
+    /* ─── COOKIE SETTINGS BUTTON (🍪 persistente) ───────────────── */
+    #cookie-settings-btn {
+      position: fixed; left: 72px; bottom: 90px; z-index: 400;
+      width: 48px; height: 48px;
+      background: var(--navy); color: var(--white);
+      border: none; border-radius: 50%; cursor: pointer;
+      font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(27,58,107,.45);
+      transition: background .2s, transform .2s;
+    }
+    #cookie-settings-btn:hover { background: var(--navy2); transform: scale(1.08); }
+    #cookie-dot {
+      position: absolute; top: 1px; right: 1px;
+      width: 12px; height: 12px;
+      background: var(--gold); border-radius: 50%;
+      border: 2px solid var(--white);
+      transition: background .3s;
+    }
+
+    /* ─── COOKIE PREFS PANEL ─────────────────────────────────────── */
+    #cookie-prefs-panel {
+      position: fixed; left: 16px; bottom: 150px; z-index: 400;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px; width: 268px;
+      box-shadow: var(--shadow2);
+    }
+    #cookie-prefs-panel.hidden { display: none; }
+
+    /* ─── CONSENT ITEMS (panel + modal) ─────────────────────────── */
+    .consent-item {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .consent-item:last-of-type { border-bottom: none; padding-bottom: 0; }
+    .consent-item-info { flex: 1; min-width: 0; }
+    .consent-item-name { font-weight: 700; color: var(--text); font-size: .84rem; display: block; }
+    .consent-item-desc { color: var(--muted); font-size: .75rem; display: block; margin-top: 1px; }
+    .consent-badge {
+      font-size: .7rem; font-weight: 700; white-space: nowrap;
+      padding: 3px 9px; border-radius: 99px; flex-shrink: 0;
+    }
+    .consent-badge.always { background: rgba(27,58,107,.1); color: var(--navy); }
+    .consent-toggle-btn {
+      min-width: 50px; min-height: 28px; padding: 3px 8px;
+      border: 1.5px solid var(--border); border-radius: 99px;
+      font-family: inherit; font-size: .75rem; font-weight: 700;
+      cursor: pointer; transition: all .2s; flex-shrink: 0;
+      background: var(--light); color: var(--muted);
+    }
+    .consent-toggle-btn[aria-pressed="true"] {
+      background: #27ae60; color: var(--white); border-color: #27ae60;
+    }
+    .consent-actions {
+      display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap;
+    }
+    .consent-actions .btn { flex: 1; min-height: 36px; padding: 6px 10px; font-size: .82rem; }
+    .consent-save-row { margin-top: 8px; }
+    .consent-save-row .btn { width: 100%; min-height: 36px; font-size: .82rem; }
+
+    /* ─── PRIVACY MODAL ──────────────────────────────────────────── */
+    #privacy-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 600;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    #privacy-overlay.hidden { display: none; }
+    #privacy-modal {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 24px;
+      max-width: 580px; width: 100%;
+      max-height: 85vh; overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    }
+    .modal-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 12px; margin-bottom: 20px;
+    }
+    .modal-header h2 { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+    .modal-close {
+      background: var(--light); border: none; border-radius: 6px;
+      width: 36px; height: 36px; flex-shrink: 0;
+      cursor: pointer; font-size: 1.1rem; color: var(--text);
+      display: flex; align-items: center; justify-content: center; transition: background .2s;
+    }
+    .modal-close:hover { background: var(--light2); }
+    #privacy-modal h3 { font-size: .88rem; font-weight: 700; color: var(--navy); margin: 16px 0 6px; text-transform: uppercase; letter-spacing: .06em; }
+    #privacy-modal p  { font-size: .87rem; color: var(--muted); line-height: 1.7; }
+    #privacy-modal ul { font-size: .87rem; color: var(--muted); line-height: 1.7; padding-left: 20px; }
+
+    /* ─── COOKIE MODAL ───────────────────────────────────────────── */
+    #cookie-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 600;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    #cookie-overlay.hidden { display: none; }
+    #cookie-modal {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 24px;
+      max-width: 580px; width: 100%;
+      max-height: 85vh; overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    }
+    #cookie-modal h3 { font-size: .88rem; font-weight: 700; color: var(--navy); margin: 16px 0 6px; text-transform: uppercase; letter-spacing: .06em; }
+    #cookie-modal p  { font-size: .87rem; color: var(--muted); line-height: 1.7; }
+
+    /* ─── ACCESSIBILITY WIDGET ───────────────────────────────────── */
+    #a11y-widget-btn {
+      position: fixed; left: 16px; bottom: 90px; z-index: 400;
+      width: 48px; height: 48px;
+      background: var(--navy); color: var(--white);
+      border: none; border-radius: 50%; cursor: pointer;
+      font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(27,58,107,.45);
+      transition: background .2s, transform .2s;
+    }
+    #a11y-widget-btn:hover { background: var(--navy2); transform: scale(1.08); }
+    #a11y-panel {
+      position: fixed; left: 16px; bottom: 150px; z-index: 400;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px; width: 230px;
+      box-shadow: var(--shadow2);
+    }
+    #a11y-panel.hidden { display: none; }
+    .a11y-title {
+      font-size: .75rem; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px;
+      border-bottom: 1px solid var(--border); padding-bottom: 8px;
+    }
+    .a11y-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; margin-bottom: 10px; font-size: .82rem; color: var(--text);
+    }
+    .a11y-btn-group { display: flex; gap: 4px; }
+    .a11y-btn {
+      min-width: 30px; min-height: 30px; padding: 3px 7px;
+      border: 1.5px solid var(--border); border-radius: 6px;
+      background: var(--light); color: var(--text);
+      font-family: inherit; font-size: .82rem; font-weight: 700;
+      cursor: pointer; transition: background .15s, border-color .15s;
+    }
+    .a11y-btn:hover { background: var(--light2); border-color: var(--navy2); }
+    .a11y-btn[aria-pressed="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .a11y-reset-row { margin-top: 6px; }
+    .a11y-reset-row .a11y-btn { width: 100%; }
+
+    /* ─── ACCESSIBILITY BODY CLASSES ─────────────────────────────── */
+    body.a11y-high-contrast #page-wrap { filter: contrast(1.85); }
+    body.a11y-grayscale     #page-wrap { filter: grayscale(1); }
+    body.a11y-high-contrast.a11y-grayscale #page-wrap { filter: contrast(1.85) grayscale(1); }
+    body.a11y-underline a   { text-decoration: underline !important; }
+    #page-wrap { transition: filter .25s; }
+
+    /* ─── OVERFLOW SAFETY ────────────────────────────────────────── */
+    .btn, .nav-links a, .service-title, .review-meta .name {
+      overflow-wrap: break-word; word-break: break-word;
+    }
+    .hero-stats, .stat-band-grid { overflow: hidden; }
+    .h-stat .n, .stat-item .n { white-space: nowrap; }
+    .nav-inner { flex-wrap: wrap; gap: 8px; }
+
+    /* ─── RESPONSIVE: ≥640px ─────────────────────────────────────── */
+    @media (min-width: 640px) {
+      .container { padding: 0 24px; }
+      .section    { padding: 72px 0; }
+      .top-bar-inner { justify-content: space-between; }
+      .nav-links { display: flex; }
+      .hamburger { display: none; }
+      #mobile-menu { display: none !important; }
+      .hero-actions { flex-direction: row; flex-wrap: wrap; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-band-grid { grid-template-columns: repeat(4, 1fr); }
+      .stat-item { border-bottom: none; }
+      .stat-item:nth-child(2n) { border-right: 1px solid rgba(255,255,255,.12); }
+      .stat-item:last-child { border-right: none; }
+      .highlights-row { flex-direction: row; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-grid { grid-template-columns: 1fr 1fr; }
+      .footer-cols { grid-template-columns: repeat(3, 1fr); }
+      .footer-legal { flex-direction: row; justify-content: space-between; align-items: center; }
+      .cta-actions { flex-direction: row; justify-content: center; }
+      .cookie-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+      .cookie-text { flex: 1; }
+    }
+
+    /* ─── RESPONSIVE: ≥900px ─────────────────────────────────────── */
+    @media (min-width: 900px) {
+      .section { padding: 88px 0; }
+      #hero { padding: 80px 0 88px; }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+      .hero-content { max-width: none; }
+      .hero-card {
+        display: block;
+        background: var(--white); border-radius: 16px;
+        box-shadow: 0 16px 48px rgba(0,0,0,.22); overflow: hidden;
+      }
+      .hero-card-head {
+        background: linear-gradient(135deg, #c0392b, #e74c3c);
+        color: var(--white); padding: 18px 22px;
+        display: flex; align-items: center; gap: 12px;
+      }
+      .hero-card-head .icon { font-size: 1.5rem; }
+      .hero-card-head h3 { font-size: .97rem; font-weight: 800; margin-bottom: 2px; }
+      .hero-card-head p  { font-size: .78rem; opacity: .85; }
+      .hero-card-body { padding: 22px; }
+      .hero-card-tel {
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        background: var(--navy); color: var(--white);
+        font-size: 1.35rem; font-weight: 900; padding: 14px;
+        border-radius: 10px; margin-bottom: 14px; letter-spacing: .02em; transition: background .2s;
+      }
+      .hero-card-tel:hover { background: var(--navy2); }
+      .hero-card-features { display: flex; flex-direction: column; gap: 9px; }
+      .hcf { display: flex; align-items: center; gap: 9px; font-size: .86rem; color: var(--muted); }
+      .hcf .check { color: #27ae60; font-size: .95rem; }
+      .hero-rating {
+        display: flex; align-items: center; gap: 10px;
+        background: #fffbf0; border: 1px solid #f0d080;
+        border-radius: 8px; padding: 10px 14px; margin-top: 14px;
+      }
+      .hero-rating .stars { color: #f0a030; font-size: .95rem; letter-spacing: 2px; }
+      .hero-rating .info { font-size: .8rem; }
+      .hero-rating .info strong { color: var(--text); }
+      .hero-rating .info span   { color: var(--muted); display: block; font-size: .73rem; }
+      .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+      .why-image-side { margin-top: 0; }
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+      .area-map { margin-bottom: 0; }
+      #scrollTop           { bottom: 28px; right: 28px; }
+      #a11y-widget-btn     { bottom: 28px; left: 28px; }
+      #a11y-panel          { bottom: 88px; left: 28px; }
+      #cookie-settings-btn { bottom: 28px; left: 84px; }
+      #cookie-prefs-panel  { bottom: 88px; left: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+<div id="page-wrap">
+
+<!-- ── TOP BAR ── -->
+<div class="top-bar" role="complementary" aria-label="Informazioni di contatto">
+  <div class="container top-bar-inner">
+    <span>📍 Via Pier Fortunato Calvi 42, 10154 Torino (TO)</span>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <span>🕐 Lun–Sab 8:00–19:00</span>
+    <span class="top-bar-sep" aria-hidden="true">|</span>
+    <a href="tel:3394984500" class="tel" aria-label="Chiama S.D. TermoIdraulica al 339 498 4500">📞 339 498 4500</a>
+  </div>
+</div>
+
+<!-- ── NAVBAR ── -->
+<header>
+  <nav id="navbar" aria-label="Navigazione principale">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="S.D. TermoIdraulica – torna all'inizio">
+        <div class="logo-icon" aria-hidden="true">🔧</div>
+        <div>
+          S.D. TermoIdraulica
+          <span class="sub">Dal 1989 · Torino</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#perche">Perché noi</a></li>
+        <li><a href="#recensioni">Recensioni</a></li>
+        <li><a href="#contattaci">Contatti</a></li>
+      </ul>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Apri menu di navigazione"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" role="navigation" aria-label="Menu mobile">
+      <a href="#servizi">Servizi</a>
+      <a href="#perche">Perché noi</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contattaci">Contatti</a>
+      <div class="mobile-cta">
+        <a href="tel:3394984500" class="btn btn-gold" style="width:100%;" aria-label="Chiama ora">📞 339 498 4500</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ── URGENCY BAR ── -->
+<div class="urgency-bar" role="alert" aria-live="polite">
+  🚨 Perdita d'acqua o gas? Diagnosi e intervento rapido!
+  <a href="tel:3394984500" aria-label="Chiama ora per emergenza idraulica">Chiama ora</a>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<main id="main-content">
+
+  <!-- ── HERO ── -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title" id="hero-heading">
+          Idraulico a Torino<br/>
+          <span class="accent">Ricerca perdite</span><br/>
+          senza demolizione
+        </h1>
+        <p class="hero-subtitle">
+          Perdite d'acqua, gas o calore nascoste? Le troviamo con termografia e tecnologia avanzata, senza inutili demolizioni.
+          D. Sapone è il tuo punto di riferimento per l'idraulica professionale a Torino dal 1989.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:3394984500" class="btn btn-white btn-big" aria-label="Chiama ora S.D. TermoIdraulica al 339 498 4500">
+            🔧 Chiama subito
+          </a>
+          <a href="#servizi" class="btn btn-ghost btn-big">Scopri i servizi</a>
+        </div>
+        <div class="hero-stats" aria-label="Statistiche aziendali">
+          <div class="h-stat">
+            <div class="n" aria-label="Valutazione 4.8 su 5">4,8</div>
+            <div class="l">★★★★★ Google</div>
+          </div>
+          <div class="h-stat">
+            <div class="n" aria-label="126 recensioni">126</div>
+            <div class="l">Recensioni</div>
+          </div>
+          <div class="h-stat">
+            <div class="n" aria-label="Oltre 35 anni di esperienza">35+</div>
+            <div class="l">Anni esperienza</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero card (visible only ≥900px) -->
+      <div class="hero-card" aria-hidden="true">
+        <div class="hero-card-head">
+          <div class="icon">🚨</div>
+          <div>
+            <h3>Perdita d'acqua o gas?</h3>
+            <p>Diagnosi precisa garantita</p>
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <a href="tel:3394984500" class="hero-card-tel" tabindex="-1">📞 339 498 4500</a>
+          <div class="hero-card-features">
+            <div class="hcf"><span class="check">✓</span> Ricerca perdite senza demolizione</div>
+            <div class="hcf"><span class="check">✓</span> Termografia professionale</div>
+            <div class="hcf"><span class="check">✓</span> Intervento rapido su Torino</div>
+            <div class="hcf"><span class="check">✓</span> Dal 1989 – 35 anni di esperienza</div>
+          </div>
+          <div class="hero-rating">
+            <div class="stars">★★★★★</div>
+            <div class="info">
+              <strong>4,8 / 5 su Google</strong>
+              <span>126 recensioni verificate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="section section--alt" id="servizi" aria-labelledby="servizi-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag" aria-hidden="true">I nostri servizi</span>
+        <h2 class="section-title" id="servizi-heading">Soluzioni <span>professionali</span> per la tua casa</h2>
+        <p class="section-sub">Dalla ricerca perdite all'idraulica civile completa: tecnologia avanzata e decenni di esperienza al tuo servizio.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card urgent">
+          <span class="service-tag">Urgenza</span>
+          <div class="service-icon-wrap" aria-hidden="true">🔍</div>
+          <h3 class="service-title">Ricerca Perdite Acqua/Gas/Calore</h3>
+          <p class="service-desc">Individuazione precisa di perdite nascoste tramite strumentazione professionale, senza demolizioni inutili. Acqua, gas e impianti di riscaldamento.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon-wrap" aria-hidden="true">🌡️</div>
+          <h3 class="service-title">Termografie</h3>
+          <p class="service-desc">Rilievi termografici con camera a infrarossi per localizzare perdite, dispersioni di calore e umidità nascoste nelle strutture murarie.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon-wrap" aria-hidden="true">🔥</div>
+          <h3 class="service-title">Riscaldamento senza demolizione</h3>
+          <p class="service-desc">Riparazione e manutenzione di impianti di riscaldamento con intervento minimamente invasivo: diagnosi precisa, nessun muro abbattuto inutilmente.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon-wrap" aria-hidden="true">🎥</div>
+          <h3 class="service-title">Video ispezioni canne fumarie</h3>
+          <p class="service-desc">Ispezione endoscopica interna per verificare integrità, ostruzioni e anomalie nelle canne fumarie, senza smontare nulla.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon-wrap" aria-hidden="true">🚰</div>
+          <h3 class="service-title">Tubazioni di scarico</h3>
+          <p class="service-desc">Pulizia, riparazione e sostituzione di tubazioni di scarico civili e condominiali. Intasamenti, perdite, sostituzione parziale o totale.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon-wrap" aria-hidden="true">🔧</div>
+          <h3 class="service-title">Idraulica civile</h3>
+          <p class="service-desc">Installazione e manutenzione completa: rubinetterie, caldaie, sanitari, impianti idrici civili. Un unico interlocutore per ogni esigenza idraulica.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAT BAND ── -->
+  <div class="stat-band" aria-label="Statistiche aziendali in evidenza">
+    <div class="container">
+      <dl class="stat-band-grid">
+        <div class="stat-item"><dt class="n">4,8★</dt><dd class="l">su Google Reviews</dd></div>
+        <div class="stat-item"><dt class="n">126+</dt><dd class="l">Clienti soddisfatti</dd></div>
+        <div class="stat-item"><dt class="n">35+</dt><dd class="l">Anni di esperienza</dd></div>
+        <div class="stat-item"><dt class="n">1989</dt><dd class="l">Anno di fondazione</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- ── WHY US ── -->
+  <section class="section" id="perche" aria-labelledby="perche-heading">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <span class="tag" aria-hidden="true">Perché sceglierci</span>
+          <h2 class="section-title" id="perche-heading" style="margin-bottom:10px;">Un'azienda storica che fa la <span>differenza</span></h2>
+          <p class="section-sub" style="margin-bottom:28px;">S.D. TermoIdraulica non è solo un idraulico: è un partner di fiducia con oltre 35 anni di esperienza nel settore termoidraulico torinese.</p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon" aria-hidden="true">🔍</div>
+              <div class="why-feature-body">
+                <h3>Diagnosi precisa senza demolire</h3>
+                <p>Tecnologia termografica e video ispezione per trovare la perdita esatta senza interventi murari inutili.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon" aria-hidden="true">🎓</div>
+              <div class="why-feature-body">
+                <h3>Esperienza dal 1989</h3>
+                <p>Oltre 35 anni di attività a Torino. Un'esperienza che si traduce in soluzioni efficaci e durature.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon" aria-hidden="true">💬</div>
+              <div class="why-feature-body">
+                <h3>Onestà e trasparenza</h3>
+                <p>Preventivo chiaro prima di ogni intervento. Spieghiamo ogni passo del lavoro. Nessuna sorpresa in fattura.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon" aria-hidden="true">📍</div>
+              <div class="why-feature-body">
+                <h3>Zona di operatività</h3>
+                <p>Basati a Torino (Borgo San Paolo), serviamo tutta la città e la cintura metropolitana torinese.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-image-side" aria-label="Valutazione clienti">
+          <div class="big-rating">
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <div class="num" aria-label="Valutazione 4 punto 8 su 5">4,8</div>
+            <div class="label">Punteggio medio su 126 recensioni Google</div>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-box"><div class="n">126+</div><div class="l">Clienti soddisfatti</div></div>
+            <div class="mini-box"><div class="n">35+</div><div class="l">Anni attività</div></div>
+            <div class="mini-box"><div class="n">1989</div><div class="l">Fondazione</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="section section--alt" id="recensioni" aria-labelledby="recensioni-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag" aria-hidden="true">Recensioni Google</span>
+        <h2 class="section-title" id="recensioni-heading">Cosa dicono i <span>nostri clienti</span></h2>
+        <p class="section-sub">126 recensioni con punteggio 4,8/5. La fiducia dei clienti è il nostro miglior biglietto da visita.</p>
+      </div>
+      <div class="highlights-row" aria-label="Estratti di recensioni">
+        <div class="hl-box"><p class="hl-quote">"Molto professionali e gentilissimi!!!" — Simone Bubbico</p></div>
+        <div class="hl-box"><p class="hl-quote">"Molto disponibile e in gamba! Super consigliato se volete un servizio di alta professionalità." — Antonella Fratta</p></div>
+        <div class="hl-box"><p class="hl-quote">"È venuto nel giro di un'ora ed è stato veloce ed onesto." — Cinzia Dp</p></div>
+      </div>
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-header">
+            <div class="avatar" style="background:#1b3a6b;" aria-hidden="true">IG</div>
+            <div class="review-meta">
+              <div class="name">Isabella Gatti</div>
+              <div class="date"><time datetime="2026-05">3 settimane fa</time></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+          <p class="review-text">"Oltre ad un servizio molto professionale, ho particolarmente apprezzato la qualità del lavoro, l'attenzione nello spiegarmi le motivazioni di ogni singolo intervento, e il rispetto con cui si sono mossi nello spazio della casa. Raro trovare queste cura unita a professionalità ed affidabilità."</p>
+          <div class="review-source"><div class="g-dot" aria-hidden="true"></div><span>Recensione Google</span></div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div class="avatar" style="background:#27ae60;" aria-hidden="true">MP</div>
+            <div class="review-meta">
+              <div class="name">Maurizio Penengo</div>
+              <div class="date"><time datetime="2026-05">1 mese fa</time></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+          <p class="review-text">"Persona molto gentile, onesta e con la sua esperienza può risolvere qualsiasi problema."</p>
+          <div class="review-source"><div class="g-dot" aria-hidden="true"></div><span>Recensione Google</span></div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div class="avatar" style="background:#4285f4;" aria-hidden="true">CD</div>
+            <div class="review-meta">
+              <div class="name">Cinzia Dp</div>
+              <div class="date"><time datetime="2026-02">4 mesi fa</time></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+          <p class="review-text">"Avevo necessità di un termoidraulico perché il mio termostato non comunicava con la caldaia. Ho cercato in rete ed ho chiamato: è venuto nel giro di un'ora ed è stato veloce ed onesto."</p>
+          <div class="review-source"><div class="g-dot" aria-hidden="true"></div><span>Recensione Google</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FORM CONTATTO ── -->
+  <section class="section" id="contattaci" aria-labelledby="form-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag" aria-hidden="true">Scrivici</span>
+        <h2 class="section-title" id="form-heading">Richiedi un <span>preventivo gratuito</span></h2>
+        <p class="section-sub">Compila il modulo e ti richiamiamo noi, oppure chiama direttamente al <a href="tel:3394984500" style="color:var(--navy);font-weight:700;">339 498 4500</a>.</p>
+      </div>
+
+      <form id="contact-form" novalidate aria-label="Modulo di contatto" style="max-width:680px;margin:0 auto;">
+        <noscript>
+          <p style="background:#fdecea;border:1px solid #ef9a9a;padding:14px;border-radius:8px;margin-bottom:16px;color:#b71c1c;">
+            JavaScript è disabilitato. Per contattarci chiama direttamente al <a href="tel:3394984500">339 498 4500</a>.
+          </p>
+        </noscript>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome e cognome <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" class="form-control"
+              required aria-required="true" aria-describedby="nome-err"
+              autocomplete="name" placeholder="Mario Rossi" />
+            <span id="nome-err" class="field-error" role="alert" aria-live="polite">⚠ Inserisci il tuo nome e cognome.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Telefono <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="telefono" name="telefono" class="form-control"
+              required aria-required="true" aria-describedby="tel-err"
+              autocomplete="tel" placeholder="+39 333 000 0000" />
+            <span id="tel-err" class="field-error" role="alert" aria-live="polite">⚠ Inserisci un numero di telefono valido.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" class="form-control"
+              required aria-required="true" aria-describedby="email-err"
+              autocomplete="email" placeholder="mario@esempio.it" />
+            <span id="email-err" class="field-error" role="alert" aria-live="polite">⚠ Inserisci un indirizzo email valido.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="servizio">Tipo di intervento</label>
+            <select id="servizio" name="servizio" class="form-control" autocomplete="off">
+              <option value="">-- Seleziona (facoltativo) --</option>
+              <option value="Perdita acqua/gas/calore">Perdita acqua/gas/calore</option>
+              <option value="Riscaldamento e caldaia">Riscaldamento e caldaia</option>
+              <option value="Ricerca perdite (termografia)">Ricerca perdite (termografia)</option>
+              <option value="Video ispezione canna fumaria">Video ispezione canna fumaria</option>
+              <option value="Tubazioni di scarico">Tubazioni di scarico</option>
+              <option value="Idraulica civile">Idraulica civile</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:16px;">
+          <label for="messaggio">Messaggio <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="messaggio" name="messaggio" class="form-control"
+            required aria-required="true" aria-describedby="msg-err"
+            placeholder="Descrivi brevemente il tuo problema o la tua richiesta…"></textarea>
+          <span id="msg-err" class="field-error" role="alert" aria-live="polite">⚠ Scrivi un messaggio.</span>
+        </div>
+
+        <div class="form-check" style="margin-top:16px;">
+          <input type="checkbox" id="privacy-check" name="privacy"
+            required aria-required="true" aria-describedby="priv-err" />
+          <label for="privacy-check">
+            Ho letto e accetto la
+            <button type="button" class="link-btn" id="open-privacy-btn" aria-haspopup="dialog">Informativa sulla Privacy</button>
+            ai sensi dell'art. 13 GDPR (Reg. UE 2016/679).
+            Il trattamento dei dati ha la finalità di rispondere alla mia richiesta. <span class="req" aria-hidden="true">*</span>
+          </label>
+        </div>
+        <span id="priv-err" class="field-error" role="alert" aria-live="polite" style="margin-top:6px;">⚠ Devi accettare la privacy per inviare il modulo.</span>
+
+        <div id="form-status" role="alert" aria-live="assertive" style="margin-top:16px;"></div>
+
+        <button type="submit" class="btn btn-navy btn-big" style="margin-top:20px;width:100%;">
+          Invia richiesta →
+        </button>
+
+        <p style="font-size:.78rem;color:var(--muted);margin-top:12px;">
+          I campi contrassegnati con <span style="color:var(--red);">*</span> sono obbligatori.
+          I dati inviati saranno utilizzati esclusivamente per rispondere alla tua richiesta.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading">Hai una perdita d'acqua o gas? <span>Chiamaci subito.</span></h2>
+      <p>Intervento rapido su Torino e provincia. Diagnosi precisa, senza demolizioni inutili.</p>
+      <div class="cta-actions">
+        <a href="tel:3394984500" class="btn btn-white btn-big" aria-label="Chiama S.D. TermoIdraulica al 339 498 4500">
+          📞 Chiama ora
+        </a>
+        <a href="#contattaci" class="btn btn-ghost btn-big">Scrivici</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATTI + MAPPA ── -->
+  <section class="section section--alt" id="dove-siamo" aria-labelledby="contatti-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag" aria-hidden="true">Contatti e sede</span>
+        <h2 class="section-title" id="contatti-heading">Siamo a <span>Torino</span>, serviamo tutta la provincia</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="area-map">
+          <div id="map-container" style="width:100%;height:100%;">
+            <div class="map-placeholder">
+              <span style="font-size:2rem;" aria-hidden="true">🗺️</span>
+              <p>La mappa è disponibile dopo aver accettato i cookie tecnici.<br/>
+                <a href="https://www.openstreetmap.org/?mlat=45.0695&mlon=7.6587#map=16/45.0695/7.6587" target="_blank" rel="noopener noreferrer" style="color:var(--navy);font-weight:700;text-decoration:underline;">
+                  Apri in OpenStreetMap <span aria-label="(si apre in una nuova scheda)">↗</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="c-item">
+            <div class="c-icon" aria-hidden="true">📍</div>
+            <div class="c-body">
+              <h3>Indirizzo</h3>
+              <p>Via Pier Fortunato Calvi, 42<br/>10154 Torino (TO)<br/>Città Metropolitana di Torino</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon" aria-hidden="true">📞</div>
+            <div class="c-body">
+              <h3>Telefono</h3>
+              <a href="tel:3394984500" aria-label="Chiama al 339 498 4500">339 498 4500</a>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon" aria-hidden="true">🕐</div>
+            <div class="c-body">
+              <h3>Orari di apertura</h3>
+              <p>Lun – Sab: 8:00 – 19:00</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon" aria-hidden="true">🗺️</div>
+            <div class="c-body">
+              <h3>Zone servite</h3>
+              <p>Torino · Moncalieri · Collegno · Grugliasco · Rivoli · Settimo Torinese · Cintura metropolitana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <div class="footer-logo">🔧 S.D. Termo<span>Idraulica</span></div>
+      <p class="footer-desc">Servizi termoidraulici professionali a Torino. Ricerca perdite senza demolizione, termografie, video ispezioni canne fumarie, idraulica civile. Dal 1989.</p>
+      <span class="footer-cert">✓ Termoidraulica professionale · Dal 1989</span>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <ul>
+          <li><a href="#servizi">Ricerca perdite</a></li>
+          <li><a href="#servizi">Termografie</a></li>
+          <li><a href="#servizi">Riscaldamento senza demolizione</a></li>
+          <li><a href="#servizi">Video ispezioni canne fumarie</a></li>
+          <li><a href="#servizi">Tubazioni di scarico</a></li>
+          <li><a href="#servizi">Idraulica civile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="tel:3394984500">📞 339 498 4500</a></li>
+          <li><a href="#dove-siamo">📍 Via P.F. Calvi 42, Torino</a></li>
+          <li><a href="#recensioni">⭐ 4,8 su Google (126 rec.)</a></li>
+          <li><a href="#contattaci">✉ Scrivici</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informazioni legali</h4>
+        <ul>
+          <li><button type="button" class="link-btn" id="open-privacy-footer" style="color:rgba(255,255,255,.55);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.55)'">Informativa Privacy</button></li>
+          <li><button type="button" class="link-btn" id="open-cookie-footer" style="color:rgba(255,255,255,.55);font-weight:500;text-decoration:none;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.55)'">Cookie Policy</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>© 2025 S.D. TermoIdraulica di D. Sapone. Tutti i diritti riservati.<br/>
+         Titolare: D. Sapone · Via Pier Fortunato Calvi 42, 10154 Torino (TO) · P.IVA: [P.IVA]</p>
+      <div class="footer-legal-links">
+        <button type="button" id="open-privacy-footer2" aria-haspopup="dialog">Informativa Privacy</button>
+        <button type="button" id="open-cookie-footer2" aria-haspopup="dialog">Cookie Policy</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /#page-wrap -->
+
+<!-- ── SCROLL TOP ── -->
+<button id="scrollTop" aria-label="Torna all'inizio della pagina">↑</button>
+
+<!-- ── ACCESSIBILITY WIDGET ── -->
+<button
+  id="a11y-widget-btn"
+  aria-label="Opzioni di accessibilità"
+  aria-expanded="false"
+  aria-controls="a11y-panel"
+  title="Impostazioni di accessibilità"
+><span aria-hidden="true" style="font-size:.95rem;font-weight:900;letter-spacing:-.05em;">Aa</span></button>
+
+<div id="a11y-panel" class="hidden" role="region" aria-label="Strumenti di accessibilità">
+  <div class="a11y-title">Accessibilità</div>
+  <div class="a11y-row">
+    <span id="a11y-font-label">Dimensione testo</span>
+    <div class="a11y-btn-group" role="group" aria-labelledby="a11y-font-label">
+      <button class="a11y-btn" id="a11y-font-decrease" aria-label="Riduci testo">A−</button>
+      <button class="a11y-btn" id="a11y-font-reset"    aria-label="Testo normale">A</button>
+      <button class="a11y-btn" id="a11y-font-increase" aria-label="Ingrandisci testo">A+</button>
+    </div>
+  </div>
+  <div class="a11y-row">
+    <label for="a11y-contrast">Alto contrasto</label>
+    <button class="a11y-btn" id="a11y-contrast" aria-pressed="false">ON/OFF</button>
+  </div>
+  <div class="a11y-row">
+    <label for="a11y-grayscale">Scala di grigi</label>
+    <button class="a11y-btn" id="a11y-grayscale" aria-pressed="false">ON/OFF</button>
+  </div>
+  <div class="a11y-row">
+    <label for="a11y-underline">Sottolinea link</label>
+    <button class="a11y-btn" id="a11y-underline" aria-pressed="false">ON/OFF</button>
+  </div>
+  <div class="a11y-reset-row">
+    <button class="a11y-btn" id="a11y-reset" aria-label="Ripristina impostazioni accessibilità">Ripristina tutto</button>
+  </div>
+</div>
+
+<!-- ── COOKIE SETTINGS BUTTON (🍪 persistente) ── -->
+<button
+  id="cookie-settings-btn"
+  aria-label="Gestisci preferenze cookie"
+  aria-expanded="false"
+  aria-controls="cookie-prefs-panel"
+  title="Preferenze cookie"
+  style="position:relative;"
+>
+  <span aria-hidden="true">🍪</span>
+  <span id="cookie-dot" aria-hidden="true"></span>
+</button>
+
+<div id="cookie-prefs-panel" class="hidden" role="region" aria-label="Gestione preferenze cookie">
+  <div class="a11y-title">Preferenze Cookie</div>
+  <div class="consent-item">
+    <div class="consent-item-info">
+      <span class="consent-item-name">Cookie tecnici</span>
+      <span class="consent-item-desc">Necessari al funzionamento del sito</span>
+    </div>
+    <span class="consent-badge always">Sempre attivi</span>
+  </div>
+  <div class="consent-item">
+    <div class="consent-item-info">
+      <span class="consent-item-name">Mappa (OpenStreetMap)</span>
+      <span class="consent-item-desc">Carica risorse da server terzi</span>
+    </div>
+    <button class="consent-toggle-btn" id="osm-toggle-panel" aria-pressed="false" aria-label="Abilita mappa OpenStreetMap">OFF</button>
+  </div>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-navy"        id="prefs-accept-all">Accetta tutti</button>
+    <button type="button" class="btn btn-outline-navy" id="prefs-reject-all">Rifiuta tutti</button>
+  </div>
+  <div class="consent-save-row">
+    <button type="button" class="btn btn-gold" id="prefs-save">Salva preferenze</button>
+  </div>
+</div>
+
+<!-- ── COOKIE BANNER ── -->
+<div id="cookie-banner" class="hidden" role="region" aria-label="Consenso cookie" aria-live="polite">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong style="color:var(--white);display:block;margin-bottom:4px;">Informativa sui Cookie</strong>
+      Utilizziamo cookie tecnici necessari al funzionamento. La mappa (OpenStreetMap) e il carattere tipografico (Google Fonts) caricano risorse da server di terze parti.
+    </div>
+    <div class="cookie-btns">
+      <button type="button" class="btn btn-gold"          id="cookie-accept-all">Accetta tutti</button>
+      <button type="button" class="btn btn-outline-white" id="cookie-accept-necessary">Rifiuta tutti</button>
+      <button type="button" class="cookie-personalizza"   id="open-cookie-from-banner" aria-haspopup="dialog">Personalizza</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRIVACY MODAL ── -->
+<div id="privacy-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+  <div id="privacy-modal">
+    <div class="modal-header">
+      <h2 id="privacy-modal-title">Informativa sulla Privacy</h2>
+      <button class="modal-close" id="close-privacy" aria-label="Chiudi informativa privacy">✕</button>
+    </div>
+    <p>Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) e del D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018, Le forniamo le seguenti informazioni sul trattamento dei Suoi dati personali.</p>
+    <h3>Titolare del trattamento</h3>
+    <p>D. Sapone – S.D. TermoIdraulica<br/>Via Pier Fortunato Calvi 42, 10154 Torino (TO)<br/>P.IVA: [P.IVA] · Tel: 339 498 4500</p>
+    <h3>Finalità e base giuridica</h3>
+    <p>I dati raccolti tramite il modulo di contatto (nome, email, telefono, messaggio) sono trattati esclusivamente per rispondere alle richieste di preventivo o informazioni. Base giuridica: consenso dell'interessato (art. 6, par. 1, lett. a) GDPR).</p>
+    <h3>Modalità di trattamento</h3>
+    <p>I dati vengono trasmessi tramite client email e non sono registrati su server propri. Il trattamento avviene in forma elettronica e cartacea con misure di sicurezza adeguate.</p>
+    <h3>Conservazione</h3>
+    <p>I dati sono conservati per il tempo strettamente necessario a evadere la richiesta e, successivamente, per un massimo di 24 mesi per eventuali obblighi fiscali o legali.</p>
+    <h3>Comunicazione a terzi</h3>
+    <p>I dati non sono ceduti a terzi, né trasferiti fuori dall'UE, salvo obblighi di legge.</p>
+    <h3>Diritti dell'interessato</h3>
+    <p>Ha diritto di accesso, rettifica, cancellazione ("diritto all'oblio"), limitazione del trattamento, portabilità dei dati e opposizione al trattamento (artt. 15–22 GDPR). Per esercitare i Suoi diritti scriva a: <strong>339 498 4500</strong> o all'indirizzo del Titolare. Ha altresì il diritto di proporre reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" style="color:var(--navy);">garanteprivacy.it</a>).</p>
+    <h3>Cookie e tecnologie di tracciamento</h3>
+    <p>Questo sito non utilizza cookie di profilazione propri. La mappa integrata (OpenStreetMap) può caricare risorse da server terzi soggetti alle proprie policy. Consulta la Cookie Policy per i dettagli.</p>
+    <button type="button" class="btn btn-navy" id="close-privacy-bottom" style="margin-top:24px;width:100%;">Ho capito – Chiudi</button>
+  </div>
+</div>
+
+<!-- ── COOKIE MODAL ── -->
+<div id="cookie-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+  <div id="cookie-modal">
+    <div class="modal-header">
+      <h2 id="cookie-modal-title">Cookie Policy e Preferenze</h2>
+      <button class="modal-close" id="close-cookie" aria-label="Chiudi">✕</button>
+    </div>
+    <div style="background:var(--light);border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+      <strong style="font-size:.84rem;color:var(--navy);display:block;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">Gestisci le tue preferenze</strong>
+      <div class="consent-item">
+        <div class="consent-item-info">
+          <span class="consent-item-name">Cookie tecnici necessari</span>
+          <span class="consent-item-desc">Salvataggio preferenze (localStorage). Sempre attivi.</span>
+        </div>
+        <span class="consent-badge always">Sempre attivi</span>
+      </div>
+      <div class="consent-item">
+        <div class="consent-item-info">
+          <span class="consent-item-name">Mappa OpenStreetMap</span>
+          <span class="consent-item-desc">Iframe da server OSM Foundation. Può impostare cookie propri.</span>
+        </div>
+        <button class="consent-toggle-btn" id="osm-toggle-modal" aria-pressed="false" aria-label="Abilita mappa OpenStreetMap">OFF</button>
+      </div>
+      <div class="consent-actions">
+        <button type="button" class="btn btn-navy"        id="modal-accept-all">Accetta tutti</button>
+        <button type="button" class="btn btn-outline-navy" id="modal-reject-all">Rifiuta tutti</button>
+      </div>
+      <div class="consent-save-row">
+        <button type="button" class="btn btn-gold" id="modal-save">Salva preferenze</button>
+      </div>
+    </div>
+    <h3>Cookie tecnici (necessari)</h3>
+    <p><strong>cookie_consent</strong>: memorizza la scelta dell'utente riguardo ai cookie. Conservato in <code>localStorage</code>. Scadenza: nessuna (fino a cancellazione manuale). Nessuna trasmissione a terzi.</p>
+    <h3>Servizi di terze parti</h3>
+    <p><strong>OpenStreetMap</strong> (caricato solo con consenso): può impostare cookie propri soggetti alla <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer" style="color:var(--navy);">Privacy Policy di OpenStreetMap Foundation</a>.</p>
+    <p style="margin-top:8px;"><strong>Google Fonts</strong>: carica il font "Inter" da server Google (base giuridica: legittimo interesse per la corretta resa grafica del sito). Per info: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--navy);">Google Privacy Policy</a>.</p>
+    <h3>Come revocare il consenso</h3>
+    <p>Puoi modificare o revocare le preferenze in qualsiasi momento tramite il pulsante 🍪 in basso a sinistra oppure contattandoci al 339 498 4500.</p>
+    <button type="button" class="btn btn-navy" id="close-cookie-bottom" style="margin-top:24px;width:100%;">Chiudi</button>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ── NAVBAR SCROLL ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+
+/* ── SCROLL TOP ── */
+document.getElementById('scrollTop').addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+);
+
+/* ── HAMBURGER MENU ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', String(!expanded));
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link =>
+  link.addEventListener('click', () => {
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+  })
+);
+
+/* ── SMOOTH ANCHOR SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ── CONTACT FORM (mailto precompilato) ── */
+const form = document.getElementById('contact-form');
+
+function showErr(id, show) {
+  const el = document.getElementById(id);
+  el.classList.toggle('visible', show);
+  const input = document.querySelector('[aria-describedby="' + id + '"]');
+  if (input) input.classList.toggle('invalid', show);
+}
+
+function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+function validateTel(v)   { return v.replace(/[\s\-().+]/g, '').length >= 6; }
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nome     = document.getElementById('nome').value.trim();
+  const tel      = document.getElementById('telefono').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const servizio = document.getElementById('servizio').value;
+  const msg      = document.getElementById('messaggio').value.trim();
+  const privacy  = document.getElementById('privacy-check').checked;
+  const status   = document.getElementById('form-status');
+
+  let valid = true;
+
+  showErr('nome-err',  !nome);               if (!nome)             valid = false;
+  showErr('tel-err',   !validateTel(tel));    if (!validateTel(tel)) valid = false;
+  showErr('email-err', !validateEmail(email)); if (!validateEmail(email)) valid = false;
+  showErr('msg-err',   !msg);                if (!msg)              valid = false;
+  showErr('priv-err',  !privacy);            if (!privacy)          valid = false;
+
+  if (!valid) {
+    status.className = 'error';
+    status.style.display = 'block';
+    status.textContent = '⚠ Correggi i campi evidenziati prima di inviare.';
+    const firstInvalid = form.querySelector('.invalid, [aria-describedby]:invalid');
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  const subject = 'Richiesta di contatto da ' + nome + (servizio ? ' – ' + servizio : '');
+  const body =
+    'Nome: ' + nome + '\n' +
+    'Telefono: ' + tel + '\n' +
+    'Email: ' + email + '\n' +
+    (servizio ? 'Servizio richiesto: ' + servizio + '\n' : '') +
+    '\nMessaggio:\n' + msg + '\n\n' +
+    '---\nInviato tramite il sito S.D. TermoIdraulica';
+
+  const destinatario = '[EMAIL@SDTERMOIDRAULICA.IT]';
+
+  window.location.href =
+    'mailto:' + destinatario +
+    '?subject=' + encodeURIComponent(subject) +
+    '&body='    + encodeURIComponent(body);
+
+  status.className = 'success';
+  status.style.display = 'block';
+  status.textContent = '✓ Apertura del client email in corso… Se non si apre automaticamente, chiama il 339 498 4500.';
+  form.reset();
+  document.getElementById('privacy-check').checked = false;
+});
+
+/* ── COOKIE CONSENT (GDPR / Garante Privacy 2022) ── */
+const CONSENT_KEY = 'sdt_cookie_consent';
+
+const MAP_PLACEHOLDER =
+  '<div class="map-placeholder">' +
+    '<span style="font-size:2rem;" aria-hidden="true">🗺️</span>' +
+    '<p>La mappa è disponibile dopo aver accettato i cookie di terze parti.<br/>' +
+      '<a href="https://www.openstreetmap.org/?mlat=45.0695&mlon=7.6587#map=16/45.0695/7.6587" ' +
+         'target="_blank" rel="noopener noreferrer" ' +
+         'style="color:var(--navy);font-weight:700;text-decoration:underline;">' +
+        'Apri in OpenStreetMap ↗' +
+      '</a>' +
+    '</p>' +
+  '</div>';
+
+function loadMap() {
+  document.getElementById('map-container').innerHTML =
+    '<iframe ' +
+      'title="Mappa – S.D. TermoIdraulica, Via Pier Fortunato Calvi 42, Torino" ' +
+      'aria-label="Mappa interattiva della sede di S.D. TermoIdraulica a Torino" ' +
+      'src="https://www.openstreetmap.org/export/embed.html?bbox=7.64,45.05,7.68,45.09&layer=mapnik&marker=45.0695,7.6587" ' +
+      'allowfullscreen loading="lazy">' +
+    '</iframe>';
+}
+
+function unloadMap() {
+  document.getElementById('map-container').innerHTML = MAP_PLACEHOLDER;
+}
+
+function updateCookieDot() {
+  const dot = document.getElementById('cookie-dot');
+  if (!dot) return;
+  dot.style.background = localStorage.getItem(CONSENT_KEY) === 'all' ? '#27ae60' : '#d4820a';
+}
+
+function syncOsmToggles(isAll) {
+  ['osm-toggle-panel','osm-toggle-modal'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.setAttribute('aria-pressed', isAll ? 'true' : 'false');
+    el.textContent = isAll ? 'ON' : 'OFF';
+  });
+}
+
+function applyConsent(value) {
+  localStorage.setItem(CONSENT_KEY, value);
+  updateCookieDot();
+  syncOsmToggles(value === 'all');
+  if (value === 'all') loadMap(); else unloadMap();
+}
+
+function hideBanner() {
+  document.getElementById('cookie-banner').classList.add('hidden');
+  ['scrollTop','a11y-widget-btn','a11y-panel','cookie-settings-btn','cookie-prefs-panel']
+    .forEach(id => { document.getElementById(id).style.bottom = ''; });
+}
+
+function showBanner() {
+  document.getElementById('cookie-banner').classList.remove('hidden');
+  document.getElementById('scrollTop').style.bottom           = '80px';
+  document.getElementById('a11y-widget-btn').style.bottom     = '90px';
+  document.getElementById('a11y-panel').style.bottom          = '150px';
+  document.getElementById('cookie-settings-btn').style.bottom = '90px';
+  document.getElementById('cookie-prefs-panel').style.bottom  = '150px';
+}
+
+(function initConsent() {
+  const saved = localStorage.getItem(CONSENT_KEY);
+  if (saved === 'all')            { loadMap(); syncOsmToggles(true);  }
+  else if (saved === 'necessary') { syncOsmToggles(false); }
+  else                            { syncOsmToggles(false); showBanner(); }
+  updateCookieDot();
+})();
+
+document.getElementById('cookie-accept-all').addEventListener('click', () => { applyConsent('all');       hideBanner(); });
+document.getElementById('cookie-accept-necessary').addEventListener('click', () => { applyConsent('necessary'); hideBanner(); });
+
+/* Cookie settings button (🍪) */
+const cookieSettingsBtn = document.getElementById('cookie-settings-btn');
+const cookiePrefsPanel  = document.getElementById('cookie-prefs-panel');
+
+function closeCookiePrefs() {
+  cookiePrefsPanel.classList.add('hidden');
+  cookieSettingsBtn.setAttribute('aria-expanded', 'false');
+}
+function openCookiePrefs() {
+  if (!a11yPanel.classList.contains('hidden')) closeA11y();
+  cookiePrefsPanel.classList.remove('hidden');
+  cookieSettingsBtn.setAttribute('aria-expanded', 'true');
+  cookiePrefsPanel.querySelector('button').focus();
+}
+cookieSettingsBtn.addEventListener('click', () => {
+  cookiePrefsPanel.classList.contains('hidden') ? openCookiePrefs() : closeCookiePrefs();
+});
+
+/* OSM toggles */
+['osm-toggle-panel','osm-toggle-modal'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const nowOn = btn.getAttribute('aria-pressed') !== 'true';
+    syncOsmToggles(nowOn);
+    if (nowOn) loadMap(); else unloadMap();
+  });
+});
+
+function savePrefs() {
+  const osmOn = document.getElementById('osm-toggle-panel').getAttribute('aria-pressed') === 'true'
+             || document.getElementById('osm-toggle-modal').getAttribute('aria-pressed') === 'true';
+  applyConsent(osmOn ? 'all' : 'necessary');
+}
+
+document.getElementById('prefs-accept-all').addEventListener('click', () => { applyConsent('all');       closeCookiePrefs(); });
+document.getElementById('prefs-reject-all').addEventListener('click', () => { applyConsent('necessary'); closeCookiePrefs(); });
+document.getElementById('prefs-save').addEventListener('click',       () => { savePrefs();               closeCookiePrefs(); });
+
+document.getElementById('modal-accept-all').addEventListener('click', () => { applyConsent('all');       closeCookie(); });
+document.getElementById('modal-reject-all').addEventListener('click', () => { applyConsent('necessary'); closeCookie(); });
+document.getElementById('modal-save').addEventListener('click',       () => { savePrefs();               closeCookie(); });
+
+document.addEventListener('click', e => {
+  if (!cookieSettingsBtn.contains(e.target) && !cookiePrefsPanel.contains(e.target)) closeCookiePrefs();
+});
+
+/* ── PRIVACY MODAL ── */
+const privacyOverlay = document.getElementById('privacy-overlay');
+const firstPrivacyFocusable = document.getElementById('close-privacy');
+
+function openPrivacy() {
+  privacyOverlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  firstPrivacyFocusable.focus();
+}
+function closePrivacy() {
+  privacyOverlay.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+['open-privacy-btn','open-privacy-footer','open-privacy-footer2'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', openPrivacy);
+});
+document.getElementById('close-privacy').addEventListener('click', closePrivacy);
+document.getElementById('close-privacy-bottom').addEventListener('click', closePrivacy);
+privacyOverlay.addEventListener('click', e => { if (e.target === privacyOverlay) closePrivacy(); });
+
+/* ── COOKIE MODAL ── */
+const cookieOverlay = document.getElementById('cookie-overlay');
+
+function openCookie() {
+  cookieOverlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('close-cookie').focus();
+}
+function closeCookie() {
+  cookieOverlay.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+['open-cookie-footer','open-cookie-footer2','open-cookie-from-banner'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', openCookie);
+});
+document.getElementById('close-cookie').addEventListener('click', closeCookie);
+document.getElementById('close-cookie-bottom').addEventListener('click', closeCookie);
+cookieOverlay.addEventListener('click', e => { if (e.target === cookieOverlay) closeCookie(); });
+
+/* ── CHIUSURA MODAL CON ESC ── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (!privacyOverlay.classList.contains('hidden'))    closePrivacy();
+    if (!cookieOverlay.classList.contains('hidden'))     closeCookie();
+    if (!a11yPanel.classList.contains('hidden'))         closeA11y();
+    if (!cookiePrefsPanel.classList.contains('hidden'))  closeCookiePrefs();
+  }
+});
+
+/* ── ACCESSIBILITY WIDGET ── */
+const a11yBtn   = document.getElementById('a11y-widget-btn');
+const a11yPanel = document.getElementById('a11y-panel');
+let a11yFontSize = 100;
+
+function closeA11y() {
+  a11yPanel.classList.add('hidden');
+  a11yBtn.setAttribute('aria-expanded', 'false');
+}
+
+a11yBtn.addEventListener('click', () => {
+  const isOpen = !a11yPanel.classList.contains('hidden');
+  if (isOpen) { closeA11y(); } else {
+    a11yPanel.classList.remove('hidden');
+    a11yBtn.setAttribute('aria-expanded', 'true');
+    a11yPanel.querySelector('button').focus();
+  }
+});
+
+document.addEventListener('click', e => {
+  if (!a11yBtn.contains(e.target) && !a11yPanel.contains(e.target)) closeA11y();
+});
+
+document.getElementById('a11y-font-increase').addEventListener('click', () => {
+  a11yFontSize = Math.min(a11yFontSize + 10, 150);
+  document.documentElement.style.fontSize = a11yFontSize + '%';
+});
+document.getElementById('a11y-font-decrease').addEventListener('click', () => {
+  a11yFontSize = Math.max(a11yFontSize - 10, 80);
+  document.documentElement.style.fontSize = a11yFontSize + '%';
+});
+document.getElementById('a11y-font-reset').addEventListener('click', () => {
+  a11yFontSize = 100;
+  document.documentElement.style.fontSize = '';
+});
+
+function setupToggle(btnId, bodyClass) {
+  document.getElementById(btnId).addEventListener('click', function() {
+    document.body.classList.toggle(bodyClass);
+    const on = document.body.classList.contains(bodyClass);
+    this.setAttribute('aria-pressed', String(on));
+  });
+}
+setupToggle('a11y-contrast',  'a11y-high-contrast');
+setupToggle('a11y-grayscale', 'a11y-grayscale');
+setupToggle('a11y-underline', 'a11y-underline');
+
+document.getElementById('a11y-reset').addEventListener('click', () => {
+  a11yFontSize = 100;
+  document.documentElement.style.fontSize = '';
+  document.body.classList.remove('a11y-high-contrast', 'a11y-grayscale', 'a11y-underline');
+  a11yPanel.querySelectorAll('[aria-pressed]').forEach(b => b.setAttribute('aria-pressed', 'false'));
+});
+</script>
+</body>
+</html>
